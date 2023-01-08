@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import {robots} from "./robots";
 import RobotCardList from "./robotCardList";
 import SearchBox from "./SearchBox";
+import './App.css';
 
 class App extends Component {
     constructor() {
@@ -24,18 +25,24 @@ class App extends Component {
         * because 'this' not referring the App; It referring the input
         * The scope of 'this' is in the input. And input doesn't have state object.
         * I need to use a special syntax in order to access the state object from App*/
-    }
+    };
 
     render() {
         const filteredRobots = this.state.robots.filter(robot => {
             return robot.name.toLowerCase().includes(this.state.searchField.toLowerCase());
         });
         return (
-            <div className='tc'>
-                <h1>Mr Robot</h1>
+            <Fragment>
+                <img
+                    src={process.env.PUBLIC_URL + "/Mr_Robot_Logo.svg"}
+                    alt="Mr robot logo"
+                    id='mrRobotLogo'
+                />
                 <SearchBox searchChange={this.onSearchChange}/>
-                <RobotCardList robots={filteredRobots}/>
-            </div>
+                <div className='tc'>
+                    <RobotCardList robots={filteredRobots}/>
+                </div>
+            </Fragment>
         );
     }
 }

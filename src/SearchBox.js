@@ -1,11 +1,11 @@
 import React from "react";
+import './searchBox.css';
 
 const SearchBox = ({ searchChange }) => {
     return (
         <React.Fragment>
             <input
-                // ba bg-light-red bg-washed-red
-                className='pa3 ba bg-washed-red'
+                className='pa3 ma3 ba bg-black-30 white'
                 id='robotSearchBox'
                 type='search'
                 placeholder='search a robots'
