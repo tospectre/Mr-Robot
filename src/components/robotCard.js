@@ -1,5 +1,5 @@
 import React from "react";
-import './robotCard.css'
+import '../robotCard.css'
 
 const robotCard = ({url, name, username, description}) => {
 /*
