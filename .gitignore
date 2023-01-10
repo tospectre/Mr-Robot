@@ -24,3 +24,5 @@ yarn-error.log*
 
 # IntelliJ folder
 .idea
+
+README.md
