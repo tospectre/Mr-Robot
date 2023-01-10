@@ -1,7 +1,8 @@
-import React, { Component, Fragment } from "react";
+import React, {Component, Fragment} from "react";
 import {robots} from "./robots";
 import RobotCardList from "./robotCardList";
 import SearchBox from "./SearchBox";
+import Scroll from "./Scroll";
 import './App.css';
 
 class App extends Component {
@@ -14,13 +15,13 @@ class App extends Component {
     }
 
     onSearchChange = (event) => {
-/*
-        In order to change state object, I need to use setState method.
-        We need to use an object to change this state like below
-        Now searchField that comes from state is changed every time
-        onSearchChange() is called.
-*/
-        this.setState( { searchField: event.target.value });
+        /*
+                In order to change state object, I need to use setState method.
+                We need to use an object to change this state like below
+                Now searchField that comes from state is changed every time
+                onSearchChange() is called.
+        */
+        this.setState({searchField: event.target.value});
         /*Using 'this' to access state object cannot be done here onSearchChange() method
         * because 'this' not referring the App; It referring the input
         * The scope of 'this' is in the input. And input doesn't have state object.
@@ -40,7 +41,9 @@ class App extends Component {
                 />
                 <SearchBox searchChange={this.onSearchChange}/>
                 <div className='tc'>
-                    <RobotCardList robots={filteredRobots}/>
+                    <Scroll>
+                        <RobotCardList robots={filteredRobots}/>
+                    </Scroll>
                 </div>
             </Fragment>
         );
