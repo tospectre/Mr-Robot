@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mr-robot/static/css/main.be774ec7.css",
+    "main.js": "/mr-robot/static/js/main.a4383809.js",
+    "index.html": "/mr-robot/index.html",
+    "main.be774ec7.css.map": "/mr-robot/static/css/main.be774ec7.css.map",
+    "main.a4383809.js.map": "/mr-robot/static/js/main.a4383809.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be774ec7.css",
+    "static/js/main.a4383809.js"
+  ]
+}
